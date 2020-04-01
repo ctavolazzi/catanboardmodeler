@@ -1,4 +1,4 @@
-# catanboardmodeler
+# Catan-Board-Modeler
 An open-source project where users can manually generate a virtual Catan board used for creating and tracking statistical data of games played over time.
 The project will do the following things (as I learn how to do them over time):
 1) display a map of Catan, with images, in the user's browser window
