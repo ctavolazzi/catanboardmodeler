@@ -1,35 +1,177 @@
 <!DOCTYPE html>
 <head>
-  <style>
-    .store{
-      background-color:orange;
-      color: antiquewhite;
-      float: left;
-      width: 25%;
-      height: 10%;
-      text-align: center;
-      padding: 5px;
-      border-radius: 5px;
-      -moz-border-radius: 5px;
-      -webkit-border-radius: 5px
-    }
-    #catan-tiles-main{
-      height: 300px;
-      width: 300px;
-    }
-  </style>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="description" content="Catan Board Modeler by TheCoffeeJesus">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/styles.css">
   <title>💩Catan Board Modeler</title>
 </head>
 <body>
   <main>
     <h1>Catan Board Modeler</h1>
-    <!--This image link works only on my local machine. Comment out to test on GitHub server.
+    <!--Thought this image link works only on my local machine. Comment out to test on GitHub server.
       <img id="catantiles" src="/Users/Christopher/Documents/Coding/Catan_Board_Modeler/images/tiles/all_catan_tiles.png" alt="catan tiles">
     -->
-    <a href="https://www.catan.com/"><img id="catan-tiles-main" src="images/tiles/all_catan_tiles.png" alt="catan tiles"></a>
+    <a href="https://www.catan.com"><img id="catan-tiles-main" src="images/tiles/all_catan_tiles.png" alt="catan tiles"></a>
     <!--Somehow this still works on a local-only browser session. I don't know why or how, but it does.-->
     <p>This is the future home of the Catan Board Modeler web app.</p>
     <p>Bookmark this page to see how the software develops over time</p>
+    <br>
+
+    </ul>
+      <ul id="grid" class="clear">
+          <li>
+              <div class="hexagon"><img src="images/tiles/brickTileUniformSize1.png" alt="brick tile"></div>
+          </li>
+          <li>
+              <div class="hexagon"><img src="images/tiles/desertTileUniformSize1.png" alt="desert tile"></div>
+          </li>
+          <li>
+              <div class="hexagon"><img src="images/tiles/oreTileUniformSize1.png" alt="ore tile"></div>
+          </li>
+          <li>
+              <div class="hexagon"></div>
+          </li>
+          <li>
+              <div class="hexagon"></div>
+          </li>
+          <li>
+              <div class="hexagon"></div>
+          </li>
+          <li>
+              <div class="hexagon"></div>
+          </li>
+          <li>
+              <div class="hexagon"></div>
+          </li>
+          <li>
+              <div class="hexagon"></div>
+          </li>
+          <li>
+              <div class="hexagon"></div>
+          </li>
+          <li>
+              <div class="hexagon"></div>
+          </li>
+          <li>
+              <div class="hexagon"></div>
+          </li>
+      </ul>
+
+    <!--Ok, here's where I'm going to write my pseudocode in comments-->
+    
+    <!--Display WebsiteNav on top-->
+    <!--Display login button in top-right corner-->
+    <!--Display a clickable animation of a Catan game being played one move at a time-->
+    <!--Display leaderboard on right-hand side of clickable animation-->
+    <!--Display images in a grid describing the way the website works-->
+    <!--Display a big button that says "Try it Out" or "Begin Game"-->
+    
+    <!--Login-->
+    <!--Display a "log-in to save stats" dismissable prompt-->
+    <!--If user dismisses prompt, display a warning that reads "Warning: you will not be able to save your statistical data"-->
+    <!--If user dismisses prompt again, go to the board and skip the Player Creation step-->
+    <!--If user logs in, display a thank you message-->
+    <!--This thank you message is the same for both the 1st login prompt and the 2nd-->
+    
+    <!--Player Setup and Logging Player Data-->
+    <!--Display an animated grid of a blank Catan board-->
+    <!--Prompt the user to select the number of players-->
+    <!--Prompt user to type their names-->
+    <!--Remenber names used by the user and predict the player name as the user types-->
+    <!--Create a separate database for each player and log data in it-->
+    <!--Logged data is available within a user's login profile-->
+    <!--Users can have only one profile, but as many logged games, players, and data as possible-->
+    <!--Users can call up past games through their user profile, and see moves made, resources in all player hands, and more as I develop this over time-->
+    
+    <!--Board Setup-->
+    <!--Prompt the user to assign a color for each player-->
+    <!--Prompt the user to select the position of the sheep port-->
+    <!--Animate the placement of the outside water tiles-->
+    <!--Prompt the user to select the first resourse tile and number marker from a list of corresponding images-->
+    <!--Animate the placement of the user selected tile and number marker at the position adjacent to the sheep port-->
+    <!--Repeat this process for every tile on the board, beginning at the tile adjacent to the sheep port and going clockwise in a spiral-->
+    <!--After all placements are completed, prompt the user to confirm that the board looks correct-->
+    <!--Allow user to make changes/edit the board by tapping specific tiles and number markers and opening the same image-based selection menu from before-->
+    <!--Once user confirms board is correct, assign resource hex values and number marker values to the underlying board hex space and port spaces-->
+    <!--Animate the board if possible-->
+
+    <!--Player Settlement and Road Initial Placement-->
+    <!--Prompt the user to select which player will place first-->
+    <!--Display a popup menu of all available piece colors (red, blue, orange, white, green, brown)-->
+    <!--Allow user to place cities and roads by tapping the board-->
+    <!--Prompt user to select which player is placing second-->
+    <!--Display a menu of all remaining available colors-->
+    <!--Repeat fot all remaining players-->
+    <!--Allow user to edit the position of pieces by tapping and dragging them-->
+    <!--Limit the number of pieces and locations a user can place to follow the rules of Catan (i.e. two settlements have to be one intersection away from one another)-->
+   
+    <!--Initial Settlement and Road Placement-->
+    <!--Once a settlement is placed, assign a value to mark the order (first, second) it was placed-->
+    <!--Allow user to place roads only attached to a city-->
+    <!--Once user has placed all starting pieces for all players, prompt the user to confirm final placement-->
+    <!--Once user confirms, assign number marker values from number markers and resource tile values from resource tiles to corresponding settlements-->
+    <!--Generate resources corresponding to the tile values of the second settlement placed for each player-->
+    <!--Put those resources in each player's hand-->
+    <!--Animate all this if possible-->
+    <!--If that's too advanced, just represent it visually on screen-->
+
+    <!--Selecting Dice-->
+    <!--Prompt the user to select either "physical" or "virtual" dice-->
+    <!--If user selects "virtual" load some virtual dice roll code-->
+    <!--If user selects "physical" then don't-->
+    
+    <!--Virtual Dice-->
+    <!--Allow the user to roll a random number and generate the corresponding resources for all players-->
+    <!--Allow user to change their mind and play with physical dice instead at any time-->
+    <!--Do not allow user to select specific roll numbers from a menu; only allow random number rolls-->
+
+    <!--Physical Dice-->
+    <!--Prompt user to select number from a persistent pop-up menu-->
+    <!--Generate resources corresponding to number selected and put them in all appropriate player hands-->
+    <!--Allow user to change to virtual dice at any time-->
+    <!--Do not allow user to roll a random number while physical dice are selected-->
+
+    <!--Gameplay-->
+    <!--When a number is rolled, generate resources corresponding to the number value assigned to the number marker on each resource hex-->
+    <!--If a player has a settlement or city on an intersection adjacent to that resource hex, increase the number of resources in that player's hand corresponding to the value of the resource hex by 1 or 2-->
+    <!--If the robber is on that hex, do not award resources-->
+    <!--Allow user to select which pieces players decide to build from a pop-up menu-->
+    <!--Automatically subtract the corresponding resources from a player's hand when they are spent-->
+    <!--Do not allow players to build if they do not have enough resources-->
+    <!--Automatically log all this data-->
+    <!--Allow players to buy and use development cards-->
+    <!--Allow players to move the robber and steal resources-->
+    <!--Allow players to trade resources-->
+    <!--Make the trading operation as simple and easy as possible for the user-->
+    
+    <!--Trading Resources-->
+    <!--Trading should be simple, fast, and easy-->
+    <!--In order to keep up with the pace of Catan, users should be able to set up trades, and to delete them, on the fly-->
+    <!--Allow user to tap a "Trade" button to bring up a menu of common trades and individual resources-->
+    <!--Allow user to tap the players trading, then a number, then a resource, then an "and" button, then a "for" button, then a number, then a resource, and finally, they can confirm, edit, or dismiss the trade-->
+    <!--Another way or phrasing it would be like this:-->
+    <!--Player 1 initiates a trade. They are looking for wood and are willing to trade two brick for it.-->
+    <!--Player 2 says they're willing to do that, then as the trade almost goes, they change their mind, and instead want a brick and a wheat-->
+    <!--Player 1 says sure and they trade-->
+    <!--The trading code needs to be able to accomodate all that, in a matter of seconds, the same amount of time as it takes players to verbally and physically make that trade-->
+
+    <!--Placing Pieces-->
+    <!--The site should know how many pieces each player has-->
+    <!--User should be able to tap a menu and place the corresponding piece on the board in accordance with Catan's rules-->
+    <!--Resources should be automatically deducted from a player's hand when they place a piece-->
+    <!--This should all be visually represented on screen-->
+    <!--Under the hood, values will need to be assigned to many different things-->
+    <!--All data should be logged to user profile and player profiles-->
+
+    <!--Playing Back Old Games-->
+    <!--There should be an option to see a video of your old games-->
+
+    <!--Statistical Analysis-->
+    <!--Statistical data should be stored in databases and be abe to be indexed and searched-->
+    <!--The ultimate goal would be being able to offer users a statistical analysis on the patterns and behaviours of certain players over time-->
+    <!--All data should have the option to be manually changed-->
     <br>
     <p>If you would like to financially support the development process, thank you! You're awesome!</p>
     <p>Please click the button below to be taken to my enamel pin shop where you can buy a pin or two to support me:</p>
